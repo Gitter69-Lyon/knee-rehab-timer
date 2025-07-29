@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knee Rehab Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="timer-container">
+        <h1>Knee Rehab Timer</h1>
+
+        <!-- Week Selector -->
+        <div class="week-selector">
+            <button id="week-down-btn">-</button>
+            <span id="week-display">Week 1 (N = 1 rep)</span>
+            <button id="week-up-btn">+</button>
+        </div>
+
+        <!-- Main Display -->
+        <div class="main-display">
+            <p id="status-display">Ready to Start</p>
+            <h2 id="time-display">00:00</h2>
+        </div>
+        
+        <!-- Repetition Counter -->
+        <p id="rep-display"></p>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+            <button id="start-pause-btn" class="control-btn start-btn">START</button>
+            <button id="reset-btn" class="control-btn reset-btn">RESET</button>
+        </div>
+    </div>
+    
+    <!-- Hidden audio element for the sound cue -->
+    <audio id="audio-player" src="sounds/ding.mp3"></audio>
+
+    <!-- Link to our JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
