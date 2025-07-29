@@ -145,8 +145,13 @@ function updateUI() {
 }
 
 function playSound() {
-    audioPlayer.currentTime = 0; // Rewind to start
+    audioPlayer.currentTime = 0;
     audioPlayer.play();
+
+    // Set a timer to stop the sound after 500 milliseconds (0.5 seconds)
+    setTimeout(() => {
+        audioPlayer.pause(); // The .pause() method stops playback
+    }, 5000); // The time in milliseconds
 }
 
 // --- Event Listeners ---
